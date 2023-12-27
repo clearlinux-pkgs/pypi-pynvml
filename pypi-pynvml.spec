@@ -7,7 +7,7 @@
 #
 Name     : pypi-pynvml
 Version  : 11.5.0
-Release  : 6
+Release  : 7
 URL      : https://files.pythonhosted.org/packages/77/1b/dbc48e97c0c005a5ac4574dbea98465211e918dd79e6bdbde21ee77cccb9/pynvml-11.5.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/77/1b/dbc48e97c0c005a5ac4574dbea98465211e918dd79e6bdbde21ee77cccb9/pynvml-11.5.0.tar.gz
 Summary  : Python Bindings for the NVIDIA Management Library
