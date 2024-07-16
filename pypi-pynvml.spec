@@ -6,10 +6,10 @@
 # autospec commit: b858a2a
 #
 Name     : pypi-pynvml
-Version  : 11.5.2
-Release  : 9
-URL      : https://files.pythonhosted.org/packages/7c/95/e09eff3cfad35f3c8c46937f1885a2cc276816b5dfde199c8cccdb656326/pynvml-11.5.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/7c/95/e09eff3cfad35f3c8c46937f1885a2cc276816b5dfde199c8cccdb656326/pynvml-11.5.2.tar.gz
+Version  : 11.5.3
+Release  : 10
+URL      : https://files.pythonhosted.org/packages/e4/e9/9931792cb776716363fc7c3039b477d11278173d71ddc230eb9b5f4ce93f/pynvml-11.5.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/e4/e9/9931792cb776716363fc7c3039b477d11278173d71ddc230eb9b5f4ce93f/pynvml-11.5.3.tar.gz
 Summary  : Python utilities for the NVIDIA Management Library
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -20,7 +20,6 @@ BuildRequires : buildreq-distutils3
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-Patch1: 0001-Update-configparser-method.patch
 
 %description
 > [!WARNING]
@@ -63,11 +62,10 @@ python3 components for the pypi-pynvml package.
 
 
 %prep
-%setup -q -n pynvml-11.5.2
-cd %{_builddir}/pynvml-11.5.2
-%patch -P 1 -p1
+%setup -q -n pynvml-11.5.3
+cd %{_builddir}/pynvml-11.5.3
 pushd ..
-cp -a pynvml-11.5.2 buildavx2
+cp -a pynvml-11.5.3 buildavx2
 popd
 
 %build
@@ -75,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1721070919
+export SOURCE_DATE_EPOCH=1721165604
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
